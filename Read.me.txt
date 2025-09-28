@@ -1,0 +1,137 @@
+# R&T Banking & Finance Application
+
+Developed by:- Anil Kumar  
+Technology Stack:** Python, Tkinter, SQLite, PIL  
+
+---
+
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Modules & Libraries Used](#modules--libraries-used)
+- [Database](#database)
+- [Author](#author)
+
+---
+
+## Project Overview
+The R&T Banking & Finance Application is a desktop banking management system built using Python's Tkinter library. The application provides functionalities for both Admins and Users to manage bank accounts, perform transactions, and view account details. It ensures security via captcha verification and email-based OTP for sensitive operations.
+
+---
+
+## Features
+
+### Admin
+- Open Account:-Create new user accounts and automatically generate a password.
+- Delete Account:- Remove user accounts after OTP verification.
+- View Account:- Retrieve and display account details.
+- Admin Login:- Access control with a predefined Admin account.
+
+### User
+- Login:-Secure login with account number, password, and captcha verification.
+- Update Profile:-Edit personal details and upload a profile picture.
+- Deposit Money:- Add funds to the account with captcha verification.
+- Withdraw Money:- Withdraw funds ensuring sufficient balance.
+- Transfer Money:- Transfer funds to other accounts with captcha verification.
+- View Account Details:-View personal account information.
+- Transaction History:- View all transactions made on the account.
+
+---
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+Install Python dependencies:
+
+bash
+Copy code
+pip install pillow
+Ensure the following folders exist:
+
+images/ → To store logos and profile pictures.
+
+Database: The app uses SQLite. On first run, the required tables will be created automatically.
+
+Usage
+Run the application:
+
+bash
+Copy code
+python main.py
+Admin Login:
+
+Username: Admin
+
+Account Number: 12345
+
+Password: Admin01
+
+User Login:
+
+Use the account number and password sent to the registered email.
+
+Modules & Libraries Used
+Tkinter: GUI framework.
+
+PIL (Pillow): For image processing.
+
+SQLite3: Database management.
+
+Random & String: Captcha and OTP generation.
+
+Time & OS: Timestamp for transactions and file operations.
+
+Shutil: Copying profile pictures.
+
+banking.py: Custom module for sending OTP and emails.
+
+Database Structure
+======================
+Accounts Table
+Column Name	Data Type
+name	TEXT
+mobile	TEXT
+email	TEXT
+address	TEXT
+gender	TEXT
+account_type	TEXT
+balance	FLOAT
+aadhar_number	TEXT
+pan_number	TEXT
+pincode	TEXT
+account_number	INTEGER (Primary Key, Auto Increment)
+IFSC	TEXT
+password	TEXT
+=========================
+
+Account_statements Table
+Column Name	Data Type
+account_number	INTEGER
+amount	FLOAT
+type	TEXT
+date_time	TEXT
+balance	FLOAT
+txn_id	TEXT
+
+Screenshots
+Add your screenshots here using Markdown:
+
+markdown
+Copy code
+![Login Screen](images/login_screen.png)
+![User Dashboard](images/user_dashboard.png)
+![Admin Dashboard](images/admin_dashboard.png)
+
+Author
+Anil Kumar
+
+Email: Anil.kum9207@gmail.com
+
+
+License
+This project is free to use and modify.
