@@ -49,29 +49,37 @@ pip install pillow
 python main.py
 
 **Database Structure**
-Accounts Table
-Column Name	Data Type
-name	TEXT
-mobile	TEXT
-email	TEXT
-address	TEXT
-gender	TEXT
-account_type	TEXT
-balance	FLOAT
-aadhar_number	TEXT
-pan_number	TEXT
-pincode	TEXT
-account_number	INTEGER (Primary Key)
-IFSC	TEXT
-password	TEXT
-Account_Statements Table
-Column Name	Data Type
-account_number	INTEGER
-amount	FLOAT
-type	TEXT
-date_time	TEXT
-balance	FLOAT
-txn_id	TEXT
+
+###  Accounts Table
+
+| Column Name      | Data Type | Description |
+|------------------|----------|------------|
+| account_number   | INTEGER (Primary Key) | Unique account ID |
+| name             | TEXT     | Account holder name |
+| mobile           | TEXT     | Mobile number |
+| email            | TEXT     | Email address |
+| address          | TEXT     | Full address |
+| gender           | TEXT     | Gender |
+| account_type     | TEXT     | Savings / Current |
+| balance          | FLOAT    | Account balance |
+| aadhar_number    | TEXT     | Aadhar number |
+| pan_number       | TEXT     | PAN number |
+| pincode          | TEXT     | Area pincode |
+| IFSC             | TEXT     | Bank IFSC code |
+| password         | TEXT     | Login password |
+
+---
+
+###  Account_Statements Table
+
+| Column Name     | Data Type | Description |
+|----------------|----------|------------|
+| account_number | INTEGER  | Linked account number |
+| amount         | FLOAT    | Transaction amount |
+| type           | TEXT     | Deposit / Withdraw / Transfer |
+| date_time      | TEXT     | Transaction timestamp |
+| balance        | FLOAT    | Balance after transaction |
+| txn_id         | TEXT     | Unique transaction ID |
 
  **Screenshots**
 
